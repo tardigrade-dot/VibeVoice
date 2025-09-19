@@ -290,8 +290,8 @@ def main():
         max_new_tokens=None,
         cfg_scale=args.cfg_scale,
         tokenizer=processor.tokenizer,
-        generation_config={'do_sample': True, 'temperature': 0.95, 'top_p': 0.95, 'top_k': 0},
-        # generation_config={'do_sample': False},
+        # generation_config={'do_sample': True, 'temperature': 0.95, 'top_p': 0.95, 'top_k': 0},
+        generation_config={'do_sample': False},
         verbose=True,
     )
     generation_time = time.time() - start_time
