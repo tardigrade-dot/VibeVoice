@@ -611,7 +611,8 @@ class VibeVoiceProcessor:
         for line in lines:
             if not line.strip():
                 continue
-                
+            if not line.startswith('Speaker 1: '):
+                line = "Speaker 1: " + line
             # Use regex to handle edge cases like multiple colons
             match = re.match(r'^Speaker\s+(\d+)\s*:\s*(.*)$', line.strip(), re.IGNORECASE)
             
